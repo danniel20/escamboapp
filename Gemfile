@@ -11,12 +11,17 @@ gem 'devise'
 gem 'devise-i18n'
 #Rails gem of the Bootstrap based admin theme SB Admin 2.
 gem 'bootstrap_sb_admin_base_v2'
-#Rails bootstrap
-gem 'rails-assets-bootstrap', '3.3.7', source: 'https://rails-assets.org'
-#Notifyjs
-gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
-#A library for generating fake data such as names, addresses, and phone numbers.
-gem 'faker'
+
+
+source 'https://rails-assets.org' do
+  #Rails bootstrap
+  gem 'rails-assets-bootstrap', '3.3.7'
+  #Notifyjs
+  gem 'rails-assets-notifyjs'
+  #BootboxJS
+  gem 'rails-assets-bootbox'
+end
+
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
@@ -56,6 +61,8 @@ group :development, :test do
 end
 
 group :development do
+  #A library for generating fake data such as names, addresses, and phone numbers.
+  gem 'faker'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
