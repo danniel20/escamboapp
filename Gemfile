@@ -13,6 +13,8 @@ gem 'devise-i18n'
 gem 'bootstrap_sb_admin_base_v2'
 #Help ActiveRecord::Enum feature to work fine with I18n and simple_form
 gem 'enum_help'
+ #A library for generating fake data such as names, addresses, and phone numbers.
+  gem 'faker'
 
 source 'https://rails-assets.org' do
   #Rails bootstrap
@@ -62,8 +64,6 @@ group :development, :test do
 end
 
 group :development do
-  #A library for generating fake data such as names, addresses, and phone numbers.
-  gem 'faker'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
