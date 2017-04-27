@@ -35,7 +35,7 @@
 
                 <div class="form-group">
                     <%= f.label :role %>
-                    <%= f.collection_radion_buttons(:role, options_for_roles, :id, :description) do |b| %>
+                    <%= f.collection_radio_buttons(:role, options_for_roles, :id, :description) do |b| %>
                         <div class="radio">
                             <%= b.label { b.radio_button + b.text } %>
                         </div>
