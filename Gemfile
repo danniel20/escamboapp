@@ -13,8 +13,10 @@ gem 'devise-i18n'
 gem 'bootstrap_sb_admin_base_v2'
 #Help ActiveRecord::Enum feature to work fine with I18n and simple_form
 gem 'enum_help'
- #A library for generating fake data such as names, addresses, and phone numbers.
-  gem 'faker'
+#A library for generating fake data such as names, addresses, and phone numbers.
+gem 'faker'
+#Minimal authorization through OO design and pure Ruby classes 
+gem 'pundit'
 
 source 'https://rails-assets.org' do
   #Rails bootstrap
@@ -38,8 +40,6 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.

@@ -1,13 +1,13 @@
 class Admin < ActiveRecord::Base
   # Contants
-  ROLES = {:full_access => 0, :resticted_access => 1 }
+  ROLES = {:full_access => 0, :restricted_access => 1 }
 
   # Enums
   enum role: ROLES
 
   # Scopes
   scope :with_full_access, -> { where(role: ROLES[:full_access])}
-  scope :with_restricted_access, -> { where(role: ROLES[:resticted_access])}
+  scope :with_restricted_access, -> { where(role: ROLES[:restricted_access])}
 
   # def self.with_full_access
   #   where(role: 'full_access')
