@@ -5,6 +5,8 @@ ruby '2.3.0'
 gem 'rails', '4.2.5'
 # Bundler manages an application's dependencies through its entire life, across many machines, systematically and repeatably
 gem 'bundler', '~> 1.14.6'
+# Rake is a Make-like program implemented in Ruby. Tasks and dependencies are specified in standard Ruby syntax.
+gem 'rake', '~> 12.0.0'
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff http://rails-i18n.org
 gem 'rails-i18n'
 # Flexible authentication solution for Rails with Warden
@@ -28,9 +30,6 @@ source 'https://rails-assets.org' do
   #BootboxJS
   gem 'rails-assets-bootbox'
 end
-
-# Rake is a Make-like program implemented in Ruby. Tasks and dependencies are specified in standard Ruby syntax.
-gem 'rake', '~> 12.0.0'
 
 gem 'rspec'
 
@@ -79,6 +78,7 @@ group :development do
 end
 
 group :production do
+  # Necessário para heroku
   gem 'rails_12factor'
 end 
 
