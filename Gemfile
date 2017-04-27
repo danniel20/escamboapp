@@ -27,6 +27,9 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootbox'
 end
 
+gem 'rake', '~> 12.0.0'
+gem 'rspec'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
