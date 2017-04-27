@@ -4,7 +4,7 @@ class Backoffice::CategoriesController::CategoryService
   def create(params_category)
     @category = Category.new(params_category)
 
-    if self.@category.valid?
+    if @category.valid?
       @category.save!
     end
 
