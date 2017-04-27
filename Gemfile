@@ -3,19 +3,21 @@ ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
+# Bundler manages an application's dependencies through its entire life, across many machines, systematically and repeatably
+gem 'bundler', '~> 1.14.6'
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff http://rails-i18n.org
 gem 'rails-i18n'
 # Flexible authentication solution for Rails with Warden
 gem 'devise'
 # Translations for the devise gem
 gem 'devise-i18n'
-#Rails gem of the Bootstrap based admin theme SB Admin 2.
+# Rails gem of the Bootstrap based admin theme SB Admin 2.
 gem 'bootstrap_sb_admin_base_v2'
-#Help ActiveRecord::Enum feature to work fine with I18n and simple_form
+# Help ActiveRecord::Enum feature to work fine with I18n and simple_form
 gem 'enum_help'
-#A library for generating fake data such as names, addresses, and phone numbers.
+# A library for generating fake data such as names, addresses, and phone numbers.
 gem 'faker'
-#Minimal authorization through OO design and pure Ruby classes 
+# Minimal authorization through OO design and pure Ruby classes 
 gem 'pundit'
 
 source 'https://rails-assets.org' do
@@ -27,7 +29,9 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootbox'
 end
 
+# Rake is a Make-like program implemented in Ruby. Tasks and dependencies are specified in standard Ruby syntax.
 gem 'rake', '~> 12.0.0'
+
 gem 'rspec'
 
 # Use postgresql as the database for Active Record
