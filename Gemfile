@@ -70,6 +70,8 @@ group :development, :test do
 end
 
 group :development do
+  # Catches mail and serves it through a dream.
+  gem 'mailcatcher'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
