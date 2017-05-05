@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
 
   namespace :site do
-    get 'home', to: 'home/index'
+    get 'home', to: 'home#index'
   end
 
   devise_for :admins, :skip => [:registrations]

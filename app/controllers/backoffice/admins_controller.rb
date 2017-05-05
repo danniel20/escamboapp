@@ -1,6 +1,6 @@
 class Backoffice::AdminsController < BackofficeController
   before_action :set_admin, only: [:edit, :update, :destroy]
-  after_action :verify_authorized, only: :new
+  after_action :verify_authorized, only: [:new, :destroy]
   after_action :verify_policy_scoped, only: :index
 
   def index
@@ -17,7 +17,7 @@ class Backoffice::AdminsController < BackofficeController
   def create
     @admin = Admin.new(params_admin)
     if @admin.save
-      redirect_to(backoffice_admins_path, notice: "O Administrador (#{@admin.email}) foi cadastrado com sucesso")
+      redirect_to(backoffice_admins_path, notice: I18n.t('messages.created_with', @admin.name))
     else
       render :new
     end
@@ -30,17 +30,20 @@ class Backoffice::AdminsController < BackofficeController
 
   def update
     if @admin.update(params_admin)
-      redirect_to(backoffice_admins_path, notice: "O Administrador (#{@admin.email}) foi atualizado com sucesso")
+      redirect_to(backoffice_admins_path, notice: I18n.t('messages.updated_with', @admin.name))
     else
       render :edit
     end
   end
 
   def destroy
+    authorize @admin
+    admin_name = @admin.name
+
     admin_email = @admin.email
 
     if @admin.destroy
-      redirect_to(backoffice_admins_path, notice: "O Administrador (#{admin_email}) foi excluído com sucesso")
+      redirect_to(backoffice_admins_path, notice: I18n.t('messages.destroyed_with', @admin.name))
     else
       render :index
     end
