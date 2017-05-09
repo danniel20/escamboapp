@@ -23,6 +23,8 @@ gem 'faker'
 gem 'lerolero_generator'
 # Minimal authorization through OO design and pure Ruby classes 
 gem 'pundit'
+# Integration of RubyMoney - Money with Rails
+gem 'money-rails'
 
 source 'https://rails-assets.org' do
   #Rails bootstrap
