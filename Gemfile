@@ -19,6 +19,8 @@ gem 'bootstrap_sb_admin_base_v2'
 gem 'enum_help'
 # A library for generating fake data such as names, addresses, and phone numbers.
 gem 'faker'
+# O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
+gem 'lerolero_generator'
 # Minimal authorization through OO design and pure Ruby classes 
 gem 'pundit'
 
