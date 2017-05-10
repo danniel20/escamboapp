@@ -17,10 +17,6 @@ gem 'devise-i18n'
 gem 'bootstrap_sb_admin_base_v2'
 # Help ActiveRecord::Enum feature to work fine with I18n and simple_form
 gem 'enum_help'
-# A library for generating fake data such as names, addresses, and phone numbers.
-gem 'faker'
-# O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
-gem 'lerolero_generator'
 # Minimal authorization through OO design and pure Ruby classes 
 gem 'pundit'
 # Integration of RubyMoney - Money with Rails
@@ -84,8 +80,14 @@ end
 group :development do
   # Catches mail and serves it through a dream.
   gem 'mailcatcher'
+  # A library for generating fake data such as names, addresses, and phone numbers.
+  gem 'faker'
+  # Markdown Lorem Ipsum generator
+  gem 'doctor_ipsum'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  # O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
+  gem 'lerolero_generator'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
