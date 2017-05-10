@@ -29,6 +29,8 @@ gem 'money-rails'
 gem 'paperclip', '~> 5.0.0'
 # JQuery UI for the Rails asset pipeline
 gem 'jquery-ui-rails'
+# The safe Markdown parser, reloaded
+gem 'redcarpet'
 
 source 'https://rails-assets.org' do
   # Rails bootstrap
