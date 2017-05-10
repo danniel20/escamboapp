@@ -31,12 +31,14 @@ gem 'paperclip', '~> 5.0.0'
 gem 'jquery-ui-rails'
 
 source 'https://rails-assets.org' do
-  #Rails bootstrap
+  # Rails bootstrap
   gem 'rails-assets-bootstrap', '3.3.7'
-  #Notifyjs
-  gem 'rails-assets-notifyjs'
-  #BootboxJS
+  # Bootstrap Notify
+  gem 'rails-assets-bootstrap.growl'
+  # BootboxJS
   gem 'rails-assets-bootbox'
+  # Animate CSS
+  gem 'rails-assets-animate-css'
 end
 
 gem 'rspec'
