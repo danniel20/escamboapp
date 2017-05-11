@@ -2,7 +2,7 @@ class Site::Profile::AdsController < Site::ProfileController
   before_action :set_ad, only: [:edit, :update]
 
   def index
-	@ads = Ad.to_the(current_member)
+	 @ads = Ad.to_the(current_member)
   end
 
   def edit
@@ -38,7 +38,8 @@ class Site::Profile::AdsController < Site::ProfileController
     end
 
     def params_ad
-    	params.require(:ad).permit(:id, :title, :category_id, :price, :description, :picture, :finish_date)
+    	params.require(:ad).permit(:id, :title, :category_id, :price, :description,
+                                 :description_md, :description_short, :picture, :finish_date)
     end
 
 end
