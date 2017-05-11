@@ -19,8 +19,8 @@
 	  <div class="col-xs-6">
 	  	<div class="form-group">
 		  	<%= f.label(:title) %>
-		 	<%= f.text_field(:title, class: "form-control", placeholder: "Título") %>
-		</div>	
+		 		<%= f.text_field(:title, class: "form-control", placeholder: "Título") %>
+			</div>	
 	  </div>
   </div>
 
@@ -28,8 +28,8 @@
 	  <div class="col-xs-4">
 	  	<div class="form-group">
 		  	<%= f.label(:category) %>
-		 	<%= f.collection_select(:category_id, Category.all, :id, :description, {}, {class: "form-control"}) %>
-		</div>	
+		 		<%= f.collection_select(:category_id, Category.all, :id, :description, {}, {class: "form-control"}) %>
+			</div>	
 	  </div>
   </div>
 
@@ -39,9 +39,9 @@
 		  	<%= f.label(:price) %>
 		  	<div class="input-group">
 		  		<div class="input-group-addon"><%= @ad.price.currency.symbol %></div>
-		 		<%= f.text_field(:price, class: "form-control", placeholder: "Preço") %>
+		 			<%= f.text_field(:price, class: "form-control", placeholder: "Preço") %>
 		  	</div>
-		</div>	
+			</div>	
 	  </div>
   </div>
 
@@ -49,8 +49,8 @@
 	  <div class="col-xs-3">
 	  	<div class="form-group">
 		  	<%= f.label(:finish_date) %>
-		 	<%= f.text_field(:finish_date, class: "form-control datepicker", value: ( l(@ad.finish_date) unless @ad.finish_date.blank?) ) %>
-		</div>	
+		 		<%= f.text_field(:finish_date, class: "form-control datepicker", value: ( l(@ad.finish_date) unless @ad.finish_date.blank?) ) %>
+			</div>	
 	  </div>
   </div>
 
@@ -62,7 +62,7 @@
     			<%= image_tag(@ad.picture.url(:medium), class: "img-thumbnail") %>
 		  	<%end%>
     		<%= f.file_field(:picture, class: "btn") %>
-		</div>	
+			</div>	
 	  </div>
   </div>
 
@@ -80,26 +80,6 @@
 	  	<div class="form-group">
 		  	<%= f.label(:description_md) %>
 		 		<%= f.text_area(:description_md, class: "form-control", rows: 10) %>
-			</div>	
-	  </div>
-  </div>
-
-  <div class="row">
-	  <div class="col-xs-12">
-	  	<div class="form-group">
-
-		  	<div class="panel panel-primary">
-
-          <div class="panel-heading">
-              Pré-Visualização
-          </div>
-
-          <div class="panel-body">
-              <p><%= @ad.description.html_safe %></p>
-          </div>
-          
-      	</div>
-
 			</div>	
 	  </div>
   </div>
