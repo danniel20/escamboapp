@@ -15,6 +15,7 @@ namespace :dev do
     puts %x(rake dev:generate_admins)
     puts %x(rake dev:generate_members)
     puts %x(rake dev:generate_ads)
+    puts %x(rake dev:generate_comments)
 
     puts "Setup executado com sucesso!"
 
@@ -24,7 +25,7 @@ namespace :dev do
   desc "Cria Administradores Fake"
   task generate_admins: :environment do
 
-    puts "Cadastrando ADMINISTRADORES Fake"
+    puts "Cadastrando ADMINISTRADORES Fake..."
 
     10.times do
       Admin.create!(
@@ -43,9 +44,9 @@ namespace :dev do
   desc "Cria Membros Fake"
   task generate_members: :environment do
 
-    puts "Cadastrando MEMBROS Fake"
+    puts "Cadastrando MEMBROS Fake..."
 
-    100.times do
+    50.times do
       Member.create!(
         email: Faker::Internet.email,
         password: "123456",
@@ -76,7 +77,7 @@ namespace :dev do
       )
     end
 
-    100.times do
+    50.times do
       Ad.create!(
         title: Faker::Lorem.sentence([2,3,4,5].sample),
         description_md: markdown_fake,
@@ -90,6 +91,26 @@ namespace :dev do
     end
 
     puts "ANÚNCIOS cadastrados com sucesso!"
+  end
+
+  #########################################################################################
+  desc "Cria Comentários Fake"
+  task generate_comments: :environment do
+
+    puts "Cadastrando COMENTÁRIOS Fake..."
+
+    Ad.all.each do |ad|
+      (Random.rand(3)).times do
+        Comment.create!(
+          body: Faker::Lorem.paragraph([1,2,3].sample),
+          member: Member.all.sample,
+          ad: ad
+        )
+      end
+    end
+
+    puts "COMENTÁRIOS Fake cadastrados com sucesso!"
+
   end
 
   def markdown_fake

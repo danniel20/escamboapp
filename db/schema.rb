@@ -69,10 +69,12 @@ ActiveRecord::Schema.define(version: 20170512150829) do
   create_table "comments", force: :cascade do |t|
     t.text     "body"
     t.integer  "member_id"
+    t.integer  "ad_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_index "comments", ["ad_id"], name: "index_comments_on_ad_id", using: :btree
   add_index "comments", ["member_id"], name: "index_comments_on_member_id", using: :btree
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -108,5 +110,6 @@ ActiveRecord::Schema.define(version: 20170512150829) do
 
   add_foreign_key "ads", "categories"
   add_foreign_key "ads", "members"
+  add_foreign_key "comments", "ads"
   add_foreign_key "comments", "members"
 end
