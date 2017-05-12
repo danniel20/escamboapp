@@ -1,4 +1,9 @@
 class Member < ActiveRecord::Base
+  
+  #RatyRate
+  ratyrate_rater
+
+  # Associations
   has_many :ads
   
   # Include default devise modules. Others available are:
