@@ -12,7 +12,7 @@
 
 <div class="well well-sm">
     <div class="ratings">
-        <p class="pull-right"><%= @ad.comments.count %> comentários</p>
+        <p class="pull-right"><%= @ad.rates("quality").count %> <%= t('labels.reviews')%></p>
         <%= rating_for(@ad, 'quality') %>
     </div>
 </div>
@@ -22,10 +22,10 @@
     <div class="text-right">
         <% if member_signed_in? %>
             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#commentModal">
-              Deixe um comentário
+              <%= t('labels.let_your_comment') %>
             </button>
         <% else %>
-            <%= link_to("Efetue login para deixar seu comentário", new_member_session_path, class: "btn btn-success") %>
+            <%= link_to("#{t('labels.login_to_comment')}", new_member_session_path, class: "btn btn-success") %>
         <% end %>
     </div>    
 
