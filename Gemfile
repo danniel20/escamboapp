@@ -104,6 +104,15 @@ group :development do
   gem 'lerolero_generator'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Remote multi-server automation tool
+  gem 'capistrano', '~> 3.7'
+  # Official Ruby on Rails specific tasks for Capistrano
+  gem 'capistrano-bundler', '~> 1.2'
+  # Bundler support for Capistrano 3.x
+  gem 'capistrano-rails', '~> 1.2'
+  # RVM support for Capistrano v3
+  gem 'capistrano-rvm'
 end
 
 group :production do
