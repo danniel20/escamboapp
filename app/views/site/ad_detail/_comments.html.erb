@@ -12,7 +12,7 @@
             <p><%= comment.body %></p>
 
             <% if (current_member) && (comment.member.id == current_member.id) %>
-                <%= rating_for_user(@ad, current_member, 'quality', star: 10) %>
+                <%= rating_for_user(@ad, current_member, 'quality', star_path: '/images/ratyrate') %>
             <% end%>
             
         </div>
