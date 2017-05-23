@@ -4,6 +4,20 @@
 
     <div class="caption-full">
         <h4 class="pull-right"><%= humanized_money_with_symbol(@ad.price) %></h4>
+
+        <div class="text-right">
+            <% if member_signed_in? %>
+
+                <%= form_tag(checkout_payments_path) do %>
+                    <%= hidden_field_tag(:ad_id, @ad.id) %>
+                    <%= submit_tag("Comprar", class: "btn btn-success", data: {confirm: "Deseja realmente comprar?"}) %>
+                <% end %>
+
+            <% else %>
+                <%= link_to("Efetue login para comprar", new_member_session_path, class: "btn btn-success") %>
+            <% end %>
+        </div>
+
         <h4><a href="#"><%= @ad.title %></a></h4>
         <p><%= @ad.description.html_safe %></p>
     </div>
