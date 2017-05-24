@@ -94,6 +94,8 @@ group :development, :test do
   gem 'better_errors'
   #Generate Entity-Relationship Diagrams for Rails applications http://voormedia.github.io/rails-erd/
   gem 'rails-erd'
+  # Rack Middleware for handling Cross-Origin Resource Sharing (CORS), which makes cross-origin AJAX possible. 
+  gem 'rack-cors', :require => 'rack/cors'
 end
 
 group :development do
