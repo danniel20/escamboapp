@@ -45,6 +45,8 @@ gem 'doctor_ipsum'
 gem 'lerolero_generator'
 
 gem 'prawn-rails'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 source 'https://rails-assets.org' do
   # Rails bootstrap
